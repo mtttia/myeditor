@@ -25,13 +25,39 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: const Text("Text editor"),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add),
+            tooltip: 'Aggiungi file',
+            onPressed: () {
+              
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.create_new_folder),
+            tooltip: 'Aggiungi cartella',
+            onPressed: () {},
+          ),
+        ],
       ),
-      body: HomePage()
+      body: HomePage(),
+      drawer: Drawer(
+        
+        child: Column(
+          children: [
+            InkWell(
+              child:Container(child: Text('titolo')),
+              onTap: (){},  
+            )
+          ],
+        ),
+      ),
     )
     );
   }
